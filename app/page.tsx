@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   MessageCircle,
   Github,
@@ -165,9 +164,9 @@ export default function CommunityPage() {
                 );
               }
               return (
-                <Link key={channel.name} href={channel.href} className="block">
+                <a key={channel.name} href={channel.href} className="block">
                   {content}
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -177,7 +176,7 @@ export default function CommunityPage() {
       {/* Footer */}
       <footer className="border-t border-border/50 px-6 py-6">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <span>© 2025 Hanzo AI, Inc. Techstars '17.</span>
+          <span>© 2025 Hanzo AI, Inc. Techstars &apos;17.</span>
           <div className="flex items-center gap-4">
             <a href="https://hanzo.ai/privacy" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="https://hanzo.ai/terms" className="hover:text-foreground transition-colors">Terms</a>
