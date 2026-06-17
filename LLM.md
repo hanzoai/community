@@ -1,4 +1,4 @@
-# LLM.md - Hanzo Community
+# Hanzo Community
 
 ## Overview
 Hanzo Community — Discord, forums, events, and more
