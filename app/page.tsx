@@ -14,7 +14,7 @@ const channels = [
     icon: MessageCircle,
     name: "Discord",
     description: "Real-time chat with the community. Get help, share ideas, and connect with the team.",
-    href: "https://discord.gg/hanzo",
+    href: "https://discord.gg/CJCyAsm9Vr",
     label: "Join Discord",
     external: true,
     featured: true,
@@ -80,7 +80,7 @@ export default function CommunityPage() {
             <a href="https://hanzo.ai" className="hover:text-foreground transition-colors">hanzo.ai</a>
             <a href="https://hanzo.help" className="hover:text-foreground transition-colors">Help</a>
             <a
-              href="https://discord.gg/hanzo"
+              href="https://discord.gg/CJCyAsm9Vr"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-foreground hover:bg-accent transition-all text-sm font-medium"
