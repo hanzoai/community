@@ -1,6 +1,7 @@
 'use client'
 
-import { BookOpen, Calendar, Github, MessageCircle, Twitter, Users } from 'lucide-react'
+import { BookOpen, Calendar, MessageCircle, Users } from 'lucide-react'
+import { Github, Twitter } from '@hanzo/ui/brands'
 import { Anchor, H1, Text, XStack, YStack } from '@hanzo/ui'
 import { Grid } from '@hanzo/ui/grid'
 import { Bar, Link } from './bar'
