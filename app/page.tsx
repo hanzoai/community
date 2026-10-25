@@ -14,7 +14,7 @@ const channels: Channel[] = [
     icon: MessageCircle,
     name: 'Discord',
     description: 'Real-time chat with the community. Get help, share ideas, and connect with the team.',
-    href: 'https://discord.gg/CJCyAsm9Vr',
+    href: 'https://discord.gg/XthHQQj',
     label: 'Join Discord',
     external: true,
     featured: true,
@@ -95,7 +95,7 @@ export default function CommunityPage() {
           <Link href="https://hanzo.ai">hanzo.ai</Link>
           <Link href="https://hanzo.help">Help</Link>
           <Link
-            href="https://discord.gg/CJCyAsm9Vr"
+            href="https://discord.gg/XthHQQj"
             target="_blank"
             rel="noopener noreferrer"
             display="flex"
