@@ -1,5 +1,6 @@
 'use client'
 
+import type { ComponentProps } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { Anchor, Text, XStack, YStack } from '@hanzo/ui'
@@ -28,6 +29,9 @@ export interface Channel {
   featured: boolean
 }
 
+/** A theme colour, as `Text` takes one. */
+type Ink = ComponentProps<typeof Text>['color']
+
 /** Icons stroke `currentColor`, so a colour set here IS the icon's colour, and
  *  `$group-hover` on the card reaches it without the icon knowing anything. */
 const Glyph = ({
@@ -38,8 +42,8 @@ const Glyph = ({
 }: {
   icon: LucideIcon
   size: number
-  color: string
-  hover: string
+  color: Ink
+  hover: Ink
 }) => (
   <Text display="flex" color={color} $group-hover={{ color: hover }}>
     <Icon size={size} />
@@ -50,12 +54,12 @@ const Tile = ({ size, children }: { size: number; children: React.ReactNode }) =
   <YStack
     width={size}
     height={size}
-    borderRadius={size > 32 ? 12 : 8}
-    backgroundColor="$raised"
-    alignItems="center"
-    justifyContent="center"
-    flexShrink={0}
-    $group-hover={{ backgroundColor: '$rim' }}
+    rounded={size > 32 ? 12 : 8}
+    bg="$raised"
+    items="center"
+    justify="center"
+    shrink={0}
+    $group-hover={{ bg: '$rim' }}
   >
     {children}
   </YStack>
@@ -68,20 +72,20 @@ export const Channel = ({ icon, name, description, href, label, external, featur
     group
     display="flex"
     flexDirection={featured ? 'column' : 'row'}
-    alignItems={featured ? 'stretch' : 'flex-start'}
+    items={featured ? 'stretch' : 'flex-start'}
     height="100%"
     gap={featured ? 16 : 12}
-    padding={featured ? 24 : 16}
-    borderRadius={featured ? 16 : 12}
-    backgroundColor="$panel"
+    p={featured ? 24 : 16}
+    rounded={featured ? 16 : 12}
+    bg="$panel"
     borderWidth={1}
     borderColor="$edge"
     textDecorationLine="none"
     cursor="pointer"
-    hoverStyle={{ backgroundColor: '$hover', borderColor: '$dim' }}
+    hoverStyle={{ bg: '$hover', borderColor: '$dim' }}
   >
     {featured ? (
-      <XStack alignItems="center" justifyContent="space-between">
+      <XStack items="center" justify="space-between">
         <Tile size={40}>
           <Glyph icon={icon} size={20} color="$soft" hover="$ink" />
         </Tile>
@@ -103,8 +107,8 @@ export const Channel = ({ icon, name, description, href, label, external, featur
         a basis of 0 that is not allowed to grow collapses the text to nothing. */}
     <YStack
       gap={featured ? 4 : 2}
-      minWidth={0}
-      {...(featured ? null : { flexGrow: 1, flexShrink: 1, flexBasis: 0 })}
+      minW={0}
+      {...(featured ? null : { grow: 1, shrink: 1, flexBasis: 0 })}
     >
       <Text fontSize={featured ? 18 : 14} fontWeight={featured ? '600' : '500'} color="$ink">
         {name}
@@ -115,7 +119,7 @@ export const Channel = ({ icon, name, description, href, label, external, featur
     </YStack>
 
     {featured ? (
-      <XStack alignItems="center" gap={6} marginTop="auto">
+      <XStack items="center" gap={6} mt="auto">
         <Text fontSize={14} fontWeight="500" color="$soft" $group-hover={{ color: '$ink' }}>
           {label}
         </Text>

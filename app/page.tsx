@@ -71,12 +71,12 @@ const rest = channels.filter((c) => !c.featured)
 
 export default function CommunityPage() {
   return (
-    <YStack minHeight="100vh">
+    <YStack minH="100vh">
       <Bar top paddingVertical={16}>
         <Anchor
           href="https://hanzo.ai"
           display="flex"
-          alignItems="baseline"
+          items="baseline"
           gap={8}
           color="$ink"
           textDecorationLine="none"
@@ -91,7 +91,7 @@ export default function CommunityPage() {
           </Text>
         </Anchor>
 
-        <XStack alignItems="center" gap={16}>
+        <XStack items="center" gap={16}>
           <Link href="https://hanzo.ai">hanzo.ai</Link>
           <Link href="https://hanzo.help">Help</Link>
           <Link
@@ -99,16 +99,16 @@ export default function CommunityPage() {
             target="_blank"
             rel="noopener noreferrer"
             display="flex"
-            alignItems="center"
+            items="center"
             gap={6}
-            paddingHorizontal={12}
-            paddingVertical={6}
-            borderRadius={9999}
+            px={12}
+            py={6}
+            rounded={9999}
             borderWidth={1}
             borderColor="$edge"
             color="$ink"
             fontWeight="500"
-            hoverStyle={{ backgroundColor: '$accentBackground' }}
+            hoverStyle={{ bg: '$accentBackground' }}
           >
             <MessageCircle size={14} />
             Join Discord
@@ -116,20 +116,20 @@ export default function CommunityPage() {
         </XStack>
       </Bar>
 
-      <YStack flexGrow={1} paddingHorizontal={24} paddingTop={80} paddingBottom={64} alignItems="center">
-        <YStack width="100%" maxWidth={MEASURE} gap={64}>
-          <YStack alignItems="center" gap={16}>
+      <YStack grow={1} px={24} pt={80} pb={64} items="center">
+        <YStack width="100%" maxW={MEASURE} gap={64}>
+          <YStack items="center" gap={16}>
             <H1
               fontSize={36}
               $sm={{ fontSize: 48 }}
               fontWeight="700"
               letterSpacing={-1}
-              textAlign="center"
+              text="center"
               color="$ink"
             >
               Hanzo Community
             </H1>
-            <Text fontSize={18} lineHeight={29} maxWidth={672} textAlign="center" color="$quiet">
+            <Text fontSize={18} lineHeight={29} maxW={672} text="center" color="$quiet">
               Connect with developers, researchers, and AI builders worldwide. Get help, share
               projects, and shape the future of AI together.
             </Text>
@@ -155,7 +155,7 @@ export default function CommunityPage() {
         <Text fontSize={14} color="$quiet">
           © 2025 Hanzo AI, Inc. Techstars &apos;17.
         </Text>
-        <XStack alignItems="center" gap={16}>
+        <XStack items="center" gap={16}>
           <Link href="https://hanzo.ai/privacy">Privacy</Link>
           <Link href="https://hanzo.ai/terms">Terms</Link>
           <Link href="https://hanzo.ai/contact">Contact</Link>

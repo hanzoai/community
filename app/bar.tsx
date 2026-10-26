@@ -29,18 +29,18 @@ export const Bar = ({
   <XStack
     render={top ? 'header' : 'footer'}
     width="100%"
-    paddingHorizontal={24}
-    paddingVertical={paddingVertical}
-    justifyContent="center"
+    px={24}
+    py={paddingVertical}
+    justify="center"
     borderColor="$edge"
     {...(top ? { borderBottomWidth: 1 } : { borderTopWidth: 1 })}
   >
     <XStack
       width="100%"
-      maxWidth={1024}
+      maxW={1024}
       gap={16}
-      alignItems="center"
-      justifyContent="space-between"
+      items="center"
+      justify="space-between"
       flexDirection={stack ? 'column' : 'row'}
       // The ends wrap onto a second line rather than pushing a scrollbar onto
       // the page: at 390px the wordmark and the nav want 357px of a 342px

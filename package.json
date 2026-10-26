@@ -11,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hanzo/event": "catalog:",
     "@hanzo/gui": "catalog:",
     "@hanzo/ui": "catalog:",
     "lucide-react": "catalog:",
