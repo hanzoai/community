@@ -31,6 +31,12 @@ const extensions = [...web, '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json']
 const nextConfig: NextConfig = {
   output: 'export',
   reactStrictMode: true,
+  // Turbopack applies the extension list to the project and to transpiled
+  // packages, never to the rest of node_modules. react-native-svg (under the
+  // banner's icons) picks its web build by that list alone, so outside this it
+  // bundles the native one: Flow source and TurboModuleRegistry, which
+  // react-native-web does not export.
+  transpilePackages: ['react-native-svg'],
   turbopack: { resolveAlias: alias, resolveExtensions: extensions },
   webpack: (config) => {
     config.resolve.alias = { ...config.resolve.alias, ...alias }

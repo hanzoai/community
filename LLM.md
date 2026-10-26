@@ -33,7 +33,7 @@ community/
 ## Analytics and deploy
 
 - `app/analytics.tsx` is the docs.hanzo.ai pattern: `@hanzo/event`'s provider
-  sends the pageview to `POST api.hanzo.ai/v1/event` with this site's own
+  sends the pageview to `POST api.hanzo.ai/v1/event` (always: it is first party) with this site's own
   publishable key (cloud project `hanzo-community`), `startTags` loads GA4 and the Meta
   pixel from cloud (`GET /v1/project/tags`) once the visitor consents, and
   `@hanzo/ui/consent` is the banner. No tag id lives in this repo; the key is
