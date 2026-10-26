@@ -16,9 +16,3 @@ site:
 kms:
   org: hanzo
 
-# Canary of hanzoai/ci's verify lane; reverted after the run.
-verify:
-  - name: home
-    run: curl -fsS -o /dev/null "$HANZO_SITE_URL/"
-  - name: canary
-    run: echo "a suite that fails, to prove the rollback"; exit 1
