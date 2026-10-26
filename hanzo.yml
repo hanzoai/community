@@ -3,12 +3,13 @@
 # project `hanzo-community`, the project whose key the page sends with.
 test:
   - name: typecheck
-    run: pnpm install --frozen-lockfile && pnpm typecheck
+    run: pnpm install --frozen-lockfile && pnpm typecheck && pnpm build
 
 site:
   slug: hanzo-community
   dir: out
-  build: pnpm install --frozen-lockfile && pnpm build
+  # No build: the gate builds the export, and hanzoai/ci carries the bytes it
+  # tested to the publish job instead of that job installing and building again.
   on: [main]
 
 # The KMS tenant that holds the Sites plane deploy token.
