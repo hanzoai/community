@@ -17,8 +17,3 @@ kms:
   org: hanzo
 
 
-# Canary of hanzoai/ci's verify lane and its page; reverted after the run.
-page: [z@hanzo.ai]
-verify:
-  - name: canary
-    run: echo "a suite that fails, to prove the rollback and the page"; exit 1
