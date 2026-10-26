@@ -6,6 +6,7 @@ import { Anchor, H1, Text, XStack, YStack } from '@hanzo/ui'
 import { Grid } from '@hanzo/ui/grid'
 import { Bar, Link } from './bar'
 import { Channel } from './channel'
+import { Socials } from './socials'
 
 const MEASURE = 1024
 
@@ -155,6 +156,7 @@ export default function CommunityPage() {
         <Text fontSize={14} color="$quiet">
           © 2025 Hanzo AI, Inc. Techstars &apos;17.
         </Text>
+        <Socials />
         <XStack items="center" gap={16}>
           <Link href="https://hanzo.ai/privacy">Privacy</Link>
           <Link href="https://hanzo.ai/terms">Terms</Link>

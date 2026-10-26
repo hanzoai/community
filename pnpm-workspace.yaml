@@ -4,6 +4,7 @@ catalog:
   '@hanzo/event': '0.3.58'
   '@hanzo/gui': '8.3.5'
   '@hanzo/ui': '8.29.12'
+  '@icons-pack/react-simple-icons': '13.15.1'
   '@types/node': '26.4.0'
   '@types/react': '19.2.18'
   '@types/react-dom': '19.2.5'
